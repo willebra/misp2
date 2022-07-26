@@ -19,8 +19,8 @@ This respository contains the following modules:
 * [web-app](./web-app) which contains the source of the MISP2 web application 
   itself
 
-The for source code for the modules `packages`, 'orbeon-war' and `web-app`
-of MISP2 is open for all and it is licensed under the MIT licence.
+The for source code for the modules `packages`, `orbeon-war` and `web-app`
+of MISP2 is open for all and it is licensed under the [MIT licence](LICENSE.txt).
 
 This repository also contains a git submodule [orbeon](./orbeon) which links to the
 [GitHub repository of Orbeon Forms](https://github.com/orbeon/orbeon-forms).

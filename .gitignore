@@ -4,6 +4,7 @@
 .settings
 # Compiled class file
 *.class
+.idea
 
 # Package Files
 *.jar
