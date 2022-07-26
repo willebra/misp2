@@ -29,7 +29,7 @@ This repository also contains a git submodule [orbeon](./orbeon) which links to 
 
 ### How to build MISP2?
 
-See the instructions in [build.md](./build.md)
+See the instructions in [web-app/readme.md](./web-app)
 
 ### How to run the development packages locally
 
