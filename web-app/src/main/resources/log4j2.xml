@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
-		<Property name="logdir">/var/log/tomcat7</Property>
+        <Property name="logdir">${catalina.base}/logs</Property>
 		<Property name="pattern">%d{yyyy-MM-dd HH:mm:ss} [%c{1},%p] %M; %m%n</Property>
 	</Properties>
 
