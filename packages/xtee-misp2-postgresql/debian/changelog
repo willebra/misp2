@@ -1,4 +1,4 @@
-xtee-misp2-postgresql (2.7.0-SNAPSHOT) stable; urgency=medium
+xtee-misp2-postgresql (2.7.0) stable; urgency=medium
 
   * Migrate Orbeon Forms to 2021.1CE
   * Fix issue with REST services on X-Road 7.x
