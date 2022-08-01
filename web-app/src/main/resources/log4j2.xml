@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 	<Properties>
-        <Property name="logdir">${catalina.base}/logs</Property>
 		<Property name="pattern">%d{yyyy-MM-dd HH:mm:ss} [%c{1},%p] %M; %m%n</Property>
 	</Properties>
 
@@ -10,7 +9,7 @@
 			<PatternLayout pattern="${pattern}" />
 		</Console>
 		
-		<File name="soap" fileName="${logdir}/soap-messages.log">
+        <File name="soap" fileName="${sys:catalina.base}/logs/soap-messages.log">
 			<PatternLayout pattern="${pattern}" />
 		</File>
 		<Console name="misp2">
@@ -19,7 +18,7 @@
 				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
 			</Policies>
 		</Console>
-		<!-- <RollingFile name="misp2" fileName="${logdir}/misp2.log" filePattern="${logdir}/misp2-%d{yyyy-MM-dd}.log">
+        <!-- <RollingFile name="misp2" fileName="${sys:catalina.base}/logs/misp2.log" filePattern="${sys:catalina.base}/logs/misp2-%d{yyyy-MM-dd}.log">
 			<PatternLayout pattern="${pattern}" />
 			<Policies>
 				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
