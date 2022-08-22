@@ -2,6 +2,7 @@
 .classpath
 .project
 .settings
+.ignore
 # Compiled class file
 *.class
 .idea
@@ -32,3 +33,4 @@ packages/repo-unsigned/dists/
 # Docker dev environment
 /docker-dev/pgdata
 /docker-dev/webapps
+!/docker-dev/utils/*.jar

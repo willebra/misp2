@@ -12,7 +12,7 @@
               value="submission submission-details"/> <!-- add submission-body to values to see SOAP messages --> 
     <property as="xs:anyURI" name="oxf.epilogue.theme.renderer" value="oxf:/config/theme-orbeon.xsl"/>
     <property as="xs:anyURI" name="oxf.epilogue.theme.embeddable" value="oxf:/config/theme-orbeon-embedded.xsl"/> 
-    
+
     <!-- Change it to true to see error-messages in web-UI -->
     <property as="xs:boolean" name="oxf.http.exceptions" value="false"/>
     <!-- Change to see Orbeon version in stacktrace -->
@@ -40,7 +40,6 @@
     <property as="xs:string"  name="oxf.xforms.format.output.integer" value="if (. castable as xs:integer) then translate(format-number(xs:integer(.),'###,###,###,##0'), ',.', ' ,') else ."/>
     <property as="xs:string"  name="oxf.xforms.format.output.float" value="if (. castable as xs:float) then translate(format-number(xs:float(.),'#,##0.000'), ',.', ' ,') else ."/>
     <property as="xs:string"  name="oxf.xforms.format.output.double" value="if (. castable as xs:double) then translate(format-number(xs:double(.),'#,##0.000'), ',.', ' ,') else ."/>
-
 	<property as="xs:string" name="oxf.xforms.xbl.fr.fusion-charts.uri-to-swf"  value="/orbeon/Charts"/>
 	<property as="xs:string" name="oxf.url-rewriting.app-paths" value="^/(apps|xbl|forms|Charts)/.*$"/>
 

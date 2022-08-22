@@ -190,21 +190,22 @@ INSERT INTO misp2.xslt (query_id, xsl, priority, created, name, form_type, in_us
                 encrypt = ''false'';
                 try{
                   emailInput = $("#email-input-<xsl:value-of select="$form"/>>input");
-                  signInput = ORBEON.util.Dom.getElementById("sign-input-<xsl:value-of select="$form"/>");
+                  <!-- signInput = ORBEON.util.Dom.getElementById("sign-input-<xsl:value-of select="$form"/>");
                   encryptInput = ORBEON.util.Dom.getElementById("encrypt-input-<xsl:value-of select="$form"/>");
-                 
+                  --> 
                 }catch(err){  
                   emailInput = $("#email-input-<xsl:value-of select="$form"/>>input");
-                  signInput = ORBEON.util.Dom.get("sign-input-<xsl:value-of select="$form"/>");             
+                  <!-- signInput = ORBEON.util.Dom.get("sign-input-<xsl:value-of select="$form"/>");             
                   encryptInput = ORBEON.util.Dom.get("encrypt-input-<xsl:value-of select="$form"/>");
+                  -->
                 }                 
                 if(emailInput != null){
                    email = $("#email-input-<xsl:value-of select="$form"/>>input").val();
                 <xsl:if test="$mailSignAllowed">
-                   sign = ORBEON.xforms.Document.getValue("sign-input-<xsl:value-of select="$form"/>");
+                   sign = ORBEON.xforms.Document.getStringValue("sign-input-<xsl:value-of select="$form"/>");
                 </xsl:if>
                 <xsl:if test="$mailEncryptAllowed">
-                   encrypt = ORBEON.xforms.Document.getValue("encrypt-input-<xsl:value-of select="$form"/>");
+                   encrypt = ORBEON.xforms.Document.getStringValue("encrypt-input-<xsl:value-of select="$form"/>");
                 </xsl:if>
                 }                
                 sendPDFByMail("<xsl:value-of select="concat($form, ''.response'')"/>", email, sign, encrypt, "<xsl:value-of select="$descriptionEncoded"/>");

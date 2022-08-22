@@ -96,9 +96,11 @@ tasks.register('deployDevOrbeon') {
   dependsOn(':orbeon-war:war')
   outputs.file('docker-dev/webapps/orbeon.war')
   outputs.upToDateWhen { false } 
-  copy {
-    from tasks.getByPath(':orbeon-war:war').outputs.files.singleFile
-    into 'docker-dev/webapps'
+  doLast {
+    copy {
+      from tasks.getByPath(':orbeon-war:war').outputs.files.singleFile
+      into 'docker-dev/webapps'
+    }
   }
 }
 
