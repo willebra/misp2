@@ -60,7 +60,7 @@ cd "$(dirname "$0")"
 . resources/functions-build.sh
 
 # Variable declarations
-git_branch_misp2_webapp=master
+git_branch_misp2_webapp=main
 
 prefix=xtee-misp2
 repo_name="repo"
