@@ -1,6 +1,6 @@
 xtee-misp2-orbeon (2.7.0) stable; urgency=medium
 
-  * Migrate Orbeon Forms to 2021.1CE
+  * Migrate Orbeon Forms to 2016.3.1CE
   * Fix issue with REST services on X-Road 7.x
   * Update EHAK classifiers
   * Fix MobileID keystore loading issues
