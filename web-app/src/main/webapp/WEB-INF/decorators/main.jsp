@@ -56,7 +56,8 @@
 
         <!---->
         <script type="text/javascript" src="<s:url value='/resources/jscript/scripts.js' encode='false'/>"></script>
-        <script type="text/javascript" src="<s:url value='/resources/jscript/jquery-1.8.2.min.js' encode='false'/>"></script>
+        <script type="text/javascript" src="<s:url value='/resources/jscript/jquery-1.12.4.min.js' encode='false'/>"></script>
+        <script type="text/javascript" src="<s:url value='/resources/jscript/jquery-migrate-1.4.1.min.js' encode='false'/>"></script>
         <script type="text/javascript" src="<s:url value='/resources/jscript/jquery-ui.min.js' encode='false'/>"></script>
         <script type="text/javascript" src="<s:url value='/resources/jscript/jquery-ui-datepicker.js' encode='false'/>"></script>
         <script type="text/javascript" src="<s:url value='/resources/jscript/jquery.ui.datepicker-et.js' encode='false'/>"></script>

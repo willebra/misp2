@@ -186,10 +186,12 @@ function xformsShow(url, xformsframe)
 	  xformsURL = url + (url.indexOf('?') != -1 ? '&' : '?') + 'orbeon-embeddable=true';
 	  
 	  // make sure loader fits into orbeon window
-	  $("#loader").removeClass("xforms-loading-loading").css('background', 'white url("resources/EE/images/loading.gif") no-repeat center').
-	  css('color', 'black').css('border', '2px solid #EDF2F9').css('padding', '5px 45px 100px 45px').css('text-align', 'center').
-	  css('vertical-align', 'middle').css('margin-left', 'auto').css('margin-right', 'auto').css('display', 'inline').css('position', 'relative').
-	  css('left', '35%').css('top', '50%');
+	  $("#loader")
+      .removeClass("xforms-loading-loading")
+      .css('background', 'white url("resources/EE/images/loading.gif") no-repeat center')
+      .css('color', 'black').css('border', '2px solid #EDF2F9').css('padding', '5px 45px 100px 45px').css('text-align', 'center')
+      .css('vertical-align', 'middle').css('margin-left', 'auto').css('margin-right', 'auto').css('display', 'inline').css('position', 'relative')
+      .css('left', '35%').css('top', '50%');
 	  
 	  $(".contentbox").height("155");
 	  
@@ -209,12 +211,11 @@ function xformsShow(url, xformsframe)
 		  }
 		  if (typeof ORBEON != "undefined") {
 			 
-        // TODO: Looks like this isn't needed anymore 
 			  // initialize Orbeon only in Firefox
-			  // if (!document.all)
-			  // {
-				//   ORBEON.xforms.Init.document();
-			  // }
+			  if (!document.all)
+			  {
+				  ORBEON.xforms.Init.document();
+			  }
 			  YAHOO.util.Event._load();
 			  YAHOO.util.Event._ready();
 			  $("#loader").hide();
@@ -466,4 +467,3 @@ function xformsShow(url, xformsframe)
 	
 
 </script>
-
