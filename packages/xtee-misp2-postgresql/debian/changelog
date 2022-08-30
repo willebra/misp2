@@ -1,3 +1,7 @@
+xtee-misp2-postgresql (2.7.1) stable; urgency=medium
+  * Revert to jQuery 1.8.2
+  * Fix issue with missing XROAD_REST_QUERY_ID_MISSING header
+
 xtee-misp2-postgresql (2.7.0) stable; urgency=medium
 
   * Migrate Orbeon Forms to 2016.3.1CE
