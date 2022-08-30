@@ -66,7 +66,7 @@
 	<s:if test="#session.SESSION_USER_ROLE==4 || #session.SESSION_USER_ROLE==8">
 		<s:a cssClass="back back_btn" title="%{getText('help.tooltip.toListQueries')}"  href="javascript: history.go(-1)"><s:text name="help.back.label"/></s:a>
 	</s:if>
-	<s:hidden name="main-query-id" value="%{query.id}" theme="simple"/>
+	<s:hidden name="main-query-id" id="main-query-id" value="%{query.id}" theme="simple"/>
 	
 	<s:url value="/resources/%{subPortal}/images/calendar.png" var="calImgUrl" escapeAmp="false"/>
 	<s:hidden name="calendar-img-url" value="%{calImgUrl}" theme="simple"/>
