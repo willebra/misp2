@@ -25,7 +25,6 @@
 # Distribution
 packages/repo/dists/
 packages/repo-unsigned/dists/
-!packages/xtee-misp2-application/util/*.jar
 
 # Docs related rules
 /docs/*.pdf
