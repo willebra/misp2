@@ -31,8 +31,7 @@ function orbeon_deployed {
 	# Check whether webapp files exist that indicate deployment in Tomcat
 	if	[[ -d $orbeon_config 				]]  &&
 		[[ -f $orbeon_config/properties-local.xml		]]  &&
-		[[ -f $orbeon_config/theme-orbeon-embedded.xsl	]]  &&
-		[[ -f $orbeon_config/log4j2.xml			]]
+		[[ -f $orbeon_config/theme-orbeon-embedded.xsl	]]
 	then
 		# Webapp has been deployed
 		return 0
@@ -111,7 +110,8 @@ function backup_orbeon_config {
 
 function restore_orbeon_config {
 	cp "$orbeon_config_backup_dir"/properties-local.xml $orbeon_config/properties-local.xml
-	cp "$orbeon_config_backup_dir"/log4j2.xml $orbeon_config/log4j.xml
+	cp "$orbeon_config_backup_dir"/log4j.xml $orbeon_config/log4j.xml
+	cp "$orbeon_config_backup_dir"/log4j2.xml $orbeon_config/log4j2.xml
 }
 #####################################
 # Begin Orbeon package installation #

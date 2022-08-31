@@ -43,7 +43,7 @@
                 <!-- Orbeon Forms version -->
                 <xhtml:meta name="generator" content="{$orbeon-forms-version}"/>
                 <!-- Favicon -->
-				        <xhtml:script type="text/javascript" src="/resources/jscript/jquery-1.12.4.min.js"></xhtml:script>
+				        <xhtml:script type="text/javascript" src="/resources/jscript/jquery-1.8.2.min.js"></xhtml:script>
             </xhtml:head>
 			
 			<!-- From http://orbeon-forms-ops-users.24843.n4.nabble.com/Form-hidden-after-updating-to-orbeon-3-9-0-pre-201103180400-CE-td3388622.html -->
