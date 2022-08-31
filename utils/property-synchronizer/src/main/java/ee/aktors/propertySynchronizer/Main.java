@@ -36,81 +36,81 @@ import org.apache.commons.cli.ParseException;
 import org.apache.log4j.Logger;
 
 public class Main {
-	private static final Logger logger = Logger.getLogger(Main.class);
-	
-	public static void main(String[] args) {		
-		String sep = System.getProperty("line.separator");
-		
-		String sourceFilePath = "";
-		String targetFilePath = "";
-		String resultFilePath = "";
-		String fileEncoding = "UTF-8";
-		
-		Options options = new Options();		
-		options.addOption("h", "help", false, "Display this informative message about arguments");
-		options.addOption("v", "version", false, "Display version information");
-		options.addOption("s", "source", true, "Source properties file. Required");
-		options.addOption("t", "target", true, "Target properties file. Required");
-		options.addOption("r", "result", true, "Result properties file into which synchronized properties from target file are put. Required");
-		options.addOption("e", "encoding", true, "Encoding of properties files (source, target and result). Default "+fileEncoding);
-		
-		try{
-			CommandLineParser parser = new BasicParser();
-			CommandLine line = parser.parse(options, args);
-			
-			if(line.hasOption("h")){
-				HelpFormatter helpFormatter = new HelpFormatter();
-				helpFormatter.printHelp("propertySynchronizer", options);
-			}
-			if(line.hasOption("v")){
-				logger.info("Version: "+ResourceBundle.getBundle("config").getString("version"));
-			}
-			sourceFilePath = getRequiredOptionValue(line, "s");
-			targetFilePath = getRequiredOptionValue(line, "t");
-			resultFilePath = getRequiredOptionValue(line, "r");
-			if(line.hasOption("e")){
-				fileEncoding = line.getOptionValue("e");
-			}
-		}catch(ParseException e){
-			logger.error(e);
-			System.exit(1);
-		}
-		
-		File sourceFile = new File(sourceFilePath);
-		File targetFile = new File(targetFilePath);
-		File resultFile = new File(resultFilePath).getAbsoluteFile();
-		resultFile.getParentFile().mkdirs();
-		
-		if(sourceFile.exists()==false){
-			logger.error("Source properties file missing: "+sep+sourceFile.getAbsolutePath());
-			System.exit(1);
-		}
-		if(targetFile.exists()==false){
-			logger.error("Target properties file missing: "+sep+targetFile.getAbsolutePath());
-			System.exit(1);
-		}
-		
-		try {
-			new PropertySynchronizer().synchronize(sourceFile, targetFile, resultFile, fileEncoding);
-		} catch (Exception e) {
-			logger.error("Synchronization failed! ", e);
-			System.exit(1);
-		}
-	}
-	
-	/**
-	 * Get value of required option represented by shortOpt from commandLine
-	 * @param line
-	 * @param shortOpt
-	 * @return
-	 * @throws ParseException If commandLine does not have this option
-	 */
-	private static String getRequiredOptionValue(CommandLine commandLine, String shortOpt) throws ParseException{
-		if(commandLine.hasOption(shortOpt)){
-			return commandLine.getOptionValue(shortOpt);
-		}else{
-			throw new ParseException("Missing required option \""+shortOpt+"\"");
-		}
-	}
+    private static final Logger logger = Logger.getLogger(Main.class);
+
+    public static void main(String[] args) {		
+        String sep = System.getProperty("line.separator");
+
+        String sourceFilePath = "";
+        String targetFilePath = "";
+        String resultFilePath = "";
+        String fileEncoding = "UTF-8";
+
+        Options options = new Options();		
+        options.addOption("h", "help", false, "Display this informative message about arguments");
+        options.addOption("v", "version", false, "Display version information");
+        options.addOption("s", "source", true, "Source properties file. Required");
+        options.addOption("t", "target", true, "Target properties file. Required");
+        options.addOption("r", "result", true, "Result properties file into which synchronized properties from target file are put. Required");
+        options.addOption("e", "encoding", true, "Encoding of properties files (source, target and result). Default "+fileEncoding);
+
+        try {
+            CommandLineParser parser = new BasicParser();
+            CommandLine line = parser.parse(options, args);
+
+            if (line.hasOption("h")) {
+                HelpFormatter helpFormatter = new HelpFormatter();
+                helpFormatter.printHelp("propertySynchronizer", options);
+            }
+            if (line.hasOption("v")) {
+                logger.info("Version: "+ResourceBundle.getBundle("config").getString("version"));
+            }
+            sourceFilePath = getRequiredOptionValue(line, "s");
+            targetFilePath = getRequiredOptionValue(line, "t");
+            resultFilePath = getRequiredOptionValue(line, "r");
+            if (line.hasOption("e")) {
+                fileEncoding = line.getOptionValue("e");
+            }
+        } catch (ParseException e) {
+            logger.error(e);
+            System.exit(1);
+        }
+
+        File sourceFile = new File(sourceFilePath);
+        File targetFile = new File(targetFilePath);
+        File resultFile = new File(resultFilePath).getAbsoluteFile();
+        resultFile.getParentFile().mkdirs();
+
+        if (sourceFile.exists() == false) {
+            logger.error("Source properties file missing: "+sep+sourceFile.getAbsolutePath());
+            System.exit(1);
+        }
+        if (targetFile.exists() == false){
+            logger.error("Target properties file missing: "+sep+targetFile.getAbsolutePath());
+            System.exit(1);
+        }
+
+        try {
+            new PropertySynchronizer().synchronize(sourceFile, targetFile, resultFile, fileEncoding);
+        } catch (Exception e) {
+            logger.error("Synchronization failed! ", e);
+            System.exit(1);
+        }
+    }
+
+    /**
+     * Get value of required option represented by shortOpt from commandLine
+     * @param line
+     * @param shortOpt
+     * @return
+     * @throws ParseException If commandLine does not have this option
+    */
+    private static String getRequiredOptionValue(CommandLine commandLine, String shortOpt) throws ParseException {
+        if (commandLine.hasOption(shortOpt)) {
+            return commandLine.getOptionValue(shortOpt);
+        } else {
+            throw new ParseException("Missing required option \""+shortOpt+"\"");
+        }
+    }
 
 }

@@ -24,18 +24,18 @@
  */
 package ee.aktors.propertySynchronizer;
 
-public class PropertySynchronizerException extends Exception{
+public class PropertySynchronizerException extends Exception {
 
-	public PropertySynchronizerException(String message){
-		super(message);
-	}
-	
-	public PropertySynchronizerException(String message, Throwable cause){
-		super(message, cause);
-	}
-	
-	public PropertySynchronizerException(Throwable cause){
-		super(cause);
-	}
+    public PropertySynchronizerException(String message) {
+        super(message);
+    }
+
+    public PropertySynchronizerException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public PropertySynchronizerException(Throwable cause) {
+        super(cause);
+    }
 
 }

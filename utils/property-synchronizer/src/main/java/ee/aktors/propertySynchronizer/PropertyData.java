@@ -31,51 +31,51 @@ import java.util.ArrayList;
  * @author karol.kartau
  */
 public class PropertyData {
-	
-	private String name = "";
-	private ArrayList<String> lines = new ArrayList<String>();
-	private boolean isMetadata = false;
-	
-	/**
-	 * Construct object holding data about property with specified name and first line
-	 * @param name
-	 * @param firstLine
-	 */
-	public PropertyData(String name, String firstLine){
-		this.name = name;
-		lines.add(firstLine);
-		isMetadata = name.equals("");
-	}
-	
-	/**
-	 * Construct object holding metadata with specified first line
-	 * @param firstLine
-	 */
-	public PropertyData(String firstLine){
-		this("", firstLine);
-	}
-	
-	/**
-	 * Get property name. If this object holds metada, then returns blank
-	 * @return
-	 */
-	public String getName(){
-		return name;
-	}
-	
-	/**
-	 * Get lines of data (each line is one line in property file)
-	 * @return
-	 */
-	public ArrayList<String> getLines(){
-		return lines;
-	}
-	
-	/**
-	 * Returns whether this object holds metadata (is name blank)
-	 * @return
-	 */
-	public boolean isMetadata(){
-		return isMetadata;
-	}
+
+    private String name = "";
+    private ArrayList<String> lines = new ArrayList<String>();
+    private boolean isMetadata = false;
+
+    /**
+     * Construct object holding data about property with specified name and first line
+     * @param name
+     * @param firstLine
+    */
+    public PropertyData(String name, String firstLine){
+        this.name = name;
+        lines.add(firstLine);
+        isMetadata = name.equals("");
+    }
+
+    /**
+     * Construct object holding metadata with specified first line
+     * @param firstLine
+    */
+    public PropertyData(String firstLine){
+        this("", firstLine);
+    }
+
+    /**
+     * Get property name. If this object holds metada, then returns blank
+     * @return
+    */
+    public String getName(){
+        return name;
+    }
+
+    /**
+     * Get lines of data (each line is one line in property file)
+     * @return
+    */
+    public ArrayList<String> getLines(){
+        return lines;
+    }
+
+    /**
+     * Returns whether this object holds metadata (is name blank)
+     * @return
+    */
+    public boolean isMetadata(){
+        return isMetadata;
+    }
 }
