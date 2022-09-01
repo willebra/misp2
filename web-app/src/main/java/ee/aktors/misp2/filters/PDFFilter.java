@@ -85,6 +85,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -359,7 +360,7 @@ public class PDFFilter extends GetText implements Filter {
                 InputStream is = resolveAndOpenStream(uri);
                 if (is != null) {
                     try {
-                        URL url = new URL(uri + "?JSESSIONID=" + req.getSession().getId());
+                        URI url = new URI(uri + "?JSESSIONID=" + req.getSession().getId());
                         if (url.getPath() != null && url.getPath().toLowerCase().endsWith(".pdf")) {
                             PdfReader reader = innerOutputDevice.getReader(url);
                             PDFAsImage image = new PDFAsImage(url);
