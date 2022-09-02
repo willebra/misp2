@@ -9,7 +9,7 @@ Version: 1.0
 
  Date       | Version | Description                                                               | Author
  ---------- | ------- | ------------------------------------------------------------------------- | --------------------
- 02.09.0222 | 1.0     | Convert from Word to Markdown and translate to English                    | Raido Kaju
+ 02.09.2022 | 1.0     | Convert from Word to Markdown and translate to English                    | Raido Kaju
 
 ## License <!-- omit in toc -->
 
