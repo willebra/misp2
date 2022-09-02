@@ -42,14 +42,14 @@ Arguments should be passed in the form `-{argument_name} {argument_value}`, repl
 with names and values defined in the following table:
 
 
-Name       | Required | Has a value | Default value | Description
----------- | ---------| ----------------------------------------------------------------------
-h          | No       | No          |               | Displays information about the arguments
-v          | No       | No          |               | Displays information about the version
-s          | Yes      | Yes         |               | The source file
-t          | Yes      | Yes         |               | The target file
-r          | Yes      | Yes         |               | The result file
-e          | No       | Yes         | UTF-8         | The encoding used for the files
+ Name       | Required | Has a value | Default value | Description
+ ---------- | ---------| ------------|---------------|-----------------------------------------
+ h          | No       | No          |               | Displays information about the arguments
+ v          | No       | No          |               | Displays information about the version
+ s          | Yes      | Yes         |               | The source file
+ t          | Yes      | Yes         |               | The target file
+ r          | Yes      | Yes         |               | The result file
+ e          | No       | Yes         | UTF-8         | The encoding used for the files
 
 As an example, the following command would synchronize the `targetFile.properties` with `sourceFile.properties` and
 store the results in `resultFile.properties` with the encoding `ISO-8859-1`:
