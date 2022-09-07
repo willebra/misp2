@@ -1,7 +1,7 @@
 | ![European Union / European Regional Development Fund / Investing in your future](../../docs/img/eu_rdf_75_en.png "Documents that are tagged with EU/SF logos must keep the logos until 1.1.2022, if it has not stated otherwise in the documentation. If new documentation is created  using EU/SF resources the logos must be tagged appropriately so that the deadline for logos could be found.") |
 | -------------------------: |
 
-# MISP2 Installation and Configuration Guide
+# MISP2 Property Synchronizer Manual
 
 Version: 1.0
 

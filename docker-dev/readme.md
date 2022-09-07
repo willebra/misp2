@@ -34,7 +34,8 @@ To log into the container, run the following command:
 docker compose exec misp bash
 ```
 
-Once inside the container, run the following commands:
+Once inside the container, run the following commands (for more commands, please refer to the
+[Admin Tool Manual](../utils/admin-tool/manual.md)):
 
 ```bash
 cd /utils

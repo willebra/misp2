@@ -336,9 +336,7 @@ Please provide x-road v6 member classes (comma separated list)? [default: COM,NG
 
 After installing the web application you can proceed to configure MISP2
 administrator account and IP addresses from where administrator web interface
-can be accessed as described in Section
-[6.1](#61-administration-of-misp2-administrator-accounts-from-the-command-line)
-of this guide.
+can be accessed as described in the [Admin Tool user manual](../utils/admin-tool/manual.md).
 
 In a production environment, the particular institution’s certificate should
 also be added to the Apache HTTP server to allow for HTTPS connections. This is
@@ -769,27 +767,9 @@ apache web server configuration.
 
 ### 6.1 Administration of MISP2 administrator accounts from the command line
 
-There is a tool for administrating the administrator accounts of the MISP2
-application. This tool is launched from the command line as follows:
-
-```bash
-/usr/xtee/app/admintool.sh
-```
-
-The list of existing administrator accounts is displayed by default.
-
-Add the `-add` parameter to the command line to add an administrator account:
-
-```bash
-/usr/xtee/app/admintool.sh -add
-```
-
-Add the `-delete` parameter to the command line to delete the administrator
-account:
-
-```bash
-/usr/xtee/app/admintool.sh -delete
-```
+A utility is installed alongside MISP2 to help manage administrator accounts,
+for more information on how to use it, please refer to the
+[Admin Tool Manual](../utils/admin-tool/manual.md).
 
 ### 6.2 Additions to the Apache web server configuration
 

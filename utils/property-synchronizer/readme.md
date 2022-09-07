@@ -1,4 +1,4 @@
-# PropertySynchronizer
+# Property Synchronizer
 
 This is the source code for the utility jar `propertySynchronizer.jar` that is located in the directory `/usr/xtee/app`
 in a MISP2 installation.
