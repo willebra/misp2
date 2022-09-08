@@ -119,6 +119,18 @@ tasks.register('deployDevMisp') {
   }
 }
 
+tasks.register('deployDevAdminTool') {
+  dependsOn(':admin-tool:shadowJar')
+  outputs.file('docker-dev/utils/AdminTool.jar')
+  outputs.upToDateWhen { false } 
+  doLast {
+    copy {
+      from tasks.getByPath(':admin-tool:shadowJar').outputs.files.singleFile
+      into 'docker-dev/utils'
+    }
+  }
+}
+
 // Utility functions for integration tests
 
 // Used to check if the integration environment MISP2 is operational

@@ -81,6 +81,8 @@ fi
 if contains_word "$packages" "$prefix-application" && ! contains_word "$*" "-nobuild"
 then
 	build_webapp=true
+  build_admintool=true
+  build_propertysynchronizer=true
 fi
 
 if contains_word "$packages" "$prefix-orbeon" && ! contains_word "$*" "-nobuild"
@@ -108,7 +110,8 @@ then
   cd packages
 fi
 
-if [ "$build_webapp" == true ] || [ "$build_orbeon" == true ]
+if [ "$build_webapp" == true ] || [ "$build_orbeon" == true ] ||
+   ["$build_amdintool" == true ] || ["$build_propertysynchronizer" == true ]
 then
   cd ../ # To the root of the project
 
@@ -125,6 +128,28 @@ then
     mkdir -p packages/$prefix-application/war
     # Copy webapp to 'war' directory in xtee-misp2-application project
     cp web-app/build/libs/misp2.war packages/$prefix-application/war/misp2.war
+
+  fi
+
+  # Build AdminTool.jar and copy it to utils
+  if [ "$build_admintool" == true ]
+  then
+    # Build AdminTool
+    echo "$(pwd): Building MISP2 AdminTool"
+    ./gradlew :admin-tool:shadowJar
+    # Copy AdminTool.jar to 'util' directory in xtee-misp2-application project
+    cp utils/admin-tool/build/libs/AdminTool.jar packages/$prefix-application/util/AdminTool.jar
+
+  fi
+
+  # Build propertySynchronizer.jar and copy it to utils
+  if [ "$build_propertysynchronizer" == true ]
+  then
+    # Build propertySynchronizer
+    echo "$(pwd): Building MISP2 propertySynchronizer"
+    ./gradlew :property-synchronizer:shadowJar
+    # Copy propertySynchronizer.jar to 'util' directory in xtee-misp2-application project
+    cp utils/property-synchronizer/build/libs/propertySynchronizer.jar packages/$prefix-application/util/propertySynchronizer.jar
 
   fi
 
