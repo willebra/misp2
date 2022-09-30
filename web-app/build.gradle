@@ -22,7 +22,6 @@ dependencies {
   implementation 'org.postgresql:postgresql:42.2.19'
   implementation 'org.hibernate:hibernate-core:5.4.30.Final'
   implementation 'org.hibernate:hibernate-entitymanager:5.4.30.Final'
-  implementation 'org.tuckey:urlrewrite:2.5.2'
   implementation 'org.apache.struts:struts2-spring-plugin:2.5.30'
   implementation 'org.apache.struts:struts2-junit-plugin:2.5.30'
   implementation 'org.apache.struts:struts2-sitemesh-plugin:2.5.30'
