@@ -405,6 +405,10 @@ else
     	then
     		version="2.7.0"
     fi
+	if [ "$version" == "2.7.0" ]
+    	then
+    		version="2.7.1"
+    fi
 	if [ "$version" == "2.7.1" ]
     	then
     		version="2.8.0"
