@@ -1,5 +1,11 @@
 xtee-misp2-orbeon (2.8.0) stable; urgency=medium
-  * TODO: Add info
+  * Bug fixes related to generating forms from OpenAPI 3 service descriptions.
+  * MISPDEV-26: Include AdminTool and propertySynchronizer source code with
+    the main source-repository. Build tools from source during packaging
+    rather than including pre-build binaries.
+  * MISPDEV-41: Replace local core-renderer dependency with FlyingSaucer, compatible with OpenPDF.
+  * MISPDEV-42: Replace local iText dependency with OpenPDF.
+  * MISPDEV-78: Remove dependency on the Tuckey URL rewrite library and replace it with a standard JAVA ServletFilter.
 
 xtee-misp2-orbeon (2.7.1) stable; urgency=medium
   * Revert to jQuery 1.8.2
