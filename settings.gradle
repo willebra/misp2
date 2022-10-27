@@ -10,3 +10,9 @@
 rootProject.name = 'misp2'
 include 'orbeon-war'
 include 'web-app'
+
+// Utility libraries
+include 'admin-tool'
+project(':admin-tool').projectDir = file('utils/admin-tool')
+include 'property-synchronizer'
+project(':property-synchronizer').projectDir = file('utils/property-synchronizer')

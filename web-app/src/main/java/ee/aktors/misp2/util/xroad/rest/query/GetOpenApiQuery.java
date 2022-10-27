@@ -67,13 +67,14 @@ public class GetOpenApiQuery extends XRoadRestQuery {
 
             try(FileOutputStream fileOutputStream = new FileOutputStream(temp)) {
                 String response = fetch(uri);
+                logger.debug(response);
                 IOUtils.write(response, fileOutputStream, UTF_8);
             }
             try {
                 return new OpenApiParser(temp);
             } catch (Exception e){
                 String errorMessage = String.format("Failed to parse openApi response for uri %s", uri.toString());
-                logger.debug(errorMessage);
+                logger.error(errorMessage, e);
                 throw new DataExchangeException(DataExchangeException.Type.XROAD_REST_RESPONSE_INVALID_OPENAPI_FORMAT, errorMessage);
             }
 

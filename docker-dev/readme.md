@@ -23,6 +23,8 @@ docker compose down
 
 ### First run
 
+First deploy the applications as well as the `AdminTool.jar` utility by following the steps outlined below.
+
 If the database has not been initialised, you will need to log in to the `misp` containers
 once in has started and add the administrator user.
 
@@ -32,7 +34,8 @@ To log into the container, run the following command:
 docker compose exec misp bash
 ```
 
-Once inside the container, run the following commands:
+Once inside the container, run the following commands (for more commands, please refer to the
+[Admin Tool Manual](../utils/admin-tool/manual.md)):
 
 ```bash
 cd /utils
@@ -48,4 +51,12 @@ and execute the following command:
 
 ```bash
 ./gradlew deployDevOrbeon deployDevMisp
+```
+
+### Deploying the AdminTool.jar utility
+
+To deploy the `AdminTool.jar` utility into `/utils` in the container, execute the following command:
+
+```bash
+./gradlew deployDevAdminTool
 ```
