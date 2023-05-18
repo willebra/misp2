@@ -22,8 +22,8 @@ xrd_prefix=/usr/xtee
 workdir=/root/xteesrc
 pgsql_default_port=5432
 pgsql_default_dbname=misp2db
-pgsql_dir=/usr/lib/postgresql/10/bin
-pgsql_conf_dir=/etc/postgresql/10/main
+pgsql_dir=/usr/lib/postgresql/14/bin
+pgsql_conf_dir=/etc/postgresql/14/main
 current_version="2.8.0"
 
 
@@ -50,7 +50,7 @@ cd $xrd_prefix/db/sql
 if [ ! -f $pgsql_dir/psql ] ;
 then
 	echo "$pgsql_dir/psql is not found" >> /dev/stderr
-	echo "Install and run PostgreSQL 10" >> /dev/stderr
+	echo "Install and run PostgreSQL 14" >> /dev/stderr
 	echo
 	exit 1
 fi
@@ -206,12 +206,12 @@ then
 	if ! (echo "$existing_users" | tr " " "\n" | grep -wq "$username")
 	then
 		#echo  "Adding new user '$username'"
-		$pgsql_dir/createuser  -p $pgport -U postgres -P -A -D $username
+		$pgsql_dir/createuser  -p $pgport -U postgres -P -D $username
 		if [ ! "$PIPESTATUS" = "0" ];
 		then
 			echo "Cannot add new user '$username'" >> /dev/stderr
 			echo  "If user does not exist in the database then create him by running: " >> /dev/stderr
-			echo  "$pgsql_dir/createuser -p $pgport -U postgres -P -A -D $username" >> /dev/stderr
+			echo  "$pgsql_dir/createuser -p $pgport -U postgres -P -D $username" >> /dev/stderr
 			exit 1 
 		fi
 	fi
