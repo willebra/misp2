@@ -294,7 +294,7 @@ then
 		if [ ! "$PIPESTATUS" = "0" ];
 		then
 			echo "Cannot add new user '$username'"
-			echo "If user does not exist in the database then create him by running: "
+			echo "If user does not exist in the database then create them by running: "
 			echo "$pgsql_dir/createuser -p $pgport -U postgres -P -D $username"
 			echo
 			echo "When user is created please press Enter"
