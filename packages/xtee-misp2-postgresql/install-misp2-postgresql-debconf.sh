@@ -24,7 +24,7 @@ pgsql_default_port=5432
 pgsql_default_dbname=misp2db
 pgsql_dir=/usr/lib/postgresql/14/bin
 pgsql_conf_dir=/etc/postgresql/14/main
-current_version="2.9.0"
+current_version="2.9.1"
 
 
 error_prefix="\e[1m\e[91mERROR!\e[0m"
@@ -416,6 +416,10 @@ else
 	if [ "$version" == "2.8.0" ]
     	then
     		version="2.9.0"
+    fi
+	if [ "$version" == "2.9.0" ]
+    	then
+    		version="2.9.1"
     fi
 	# Substitute schema name in alter scripts
 	perl -pi -e "s/<misp2_schema>/$schema_name/g" $workdir/tmp.alter.sql

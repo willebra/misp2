@@ -1,3 +1,9 @@
+xtee-misp2-application (2.9.1) stable; urgency=medium
+
+  * Update Struts dependency
+
+ -- NIIS <info@niis.org>  Thu, 28 Dec 2023 10:25:04 +0200
+
 xtee-misp2-application (2.9.0) stable; urgency=medium
 
   * Fix fresh install issues on Ubuntu 22.04
