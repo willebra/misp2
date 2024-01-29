@@ -1,0 +1,62 @@
+---
+excludes:
+  scopes:
+  - pattern: "checkstyle"
+    reason: "BUILD_DEPENDENCY_OF"
+    comment: "Packages for code styling checks (testing) only."
+
+  - pattern: "devDependencies"
+    reason: "DEV_DEPENDENCY_OF"
+    comment: "Packages for development only."
+
+  - pattern: "jacocoAgent"
+    reason: "TEST_DEPENDENCY_OF"
+    comment: "Packages for code coverage (testing) only."
+
+  - pattern: "jacocoAnt"
+    reason: "TEST_DEPENDENCY_OF"
+    comment: "Packages for code coverage (testing) only."
+
+  - pattern: "test.*"
+    reason: "TEST_DEPENDENCY_OF"
+    comment: "Packages for testing only."
+
+  - pattern: "annotationProcessor"
+    reason: "DEV_DEPENDENCY_OF"
+    comment: "Packages for development only."
+
+  - pattern: "compileClasspath"
+    reason: "DEV_DEPENDENCY_OF"
+    comment: "Packages for development only."
+
+  - pattern: "compileOnly"
+    reason: "DEV_DEPENDENCY_OF"
+    comment: "Packages for development only."
+
+  paths:
+  - pattern: "web-app/3RD-PARTY-NOTICES.txt"
+    reason: "DOCUMENTATION_OF"
+    comment: "3rd party notices."
+
+  - pattern: "packages/**"
+    reason: "BUILD_TOOL_OF"
+    comment: "Build scripts."
+
+  - pattern: "gradle/**"
+    reason: "BUILD_TOOL_OF"
+    comment: "Build tools."
+
+  - pattern: "docker-dev/**"
+    reason: "BUILD_TOOL_OF"
+    comment: "Development tools."
+
+  - pattern: "docs/**"
+    reason: "DOCUMENTATION_OF"
+    comment: "Documentation."
+
+license_choices:
+  repository_license_choices:
+  - given: "GPL-2.0-only OR Apache-2.0"
+    choice: "Apache-2.0"
+  - given: "GPL-2.0-only OR CDDL-1.1"
+    choice: "CDDL-1.1"
