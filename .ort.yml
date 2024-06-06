@@ -113,7 +113,7 @@ resolutions:
     - message: "commercial license LicenseRef-scancode-proprietary-license in NPM::orbeon-forms:2016.3.*"
       reason: "CANT_FIX_EXCEPTION"
       comment: "These are likely oudated references to old licensing scheme, see https://github.com/orbeon/orbeon-forms/issues/6354 for possible fix."
-    - message: "commercial license LicenseRef-scancode-proprietary-license in Gradle::misp2:*"
+    - message: "commercial license LicenseRef-scancode-proprietary-license in Gradle::misp2.*"
       reason: "CANT_FIX_EXCEPTION"
       comment: "These are false positives that are found from the project itself, therefore the findings are not fetched from configuration provdider."
     - message: "commercial license LicenseRef-scancode-proprietary-license in Maven:com.sun.xml.ws:policy:2.7.*"
