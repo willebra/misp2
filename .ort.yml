@@ -70,21 +70,13 @@ curations:
       source_code_origins: [ARTIFACT, VCS]
   - id: "Maven:commons-codec:commons-codec:1.15"
     curations:
-      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      comment: "The Git URL looks malformed, so prefer the source artifact."
       source_code_origins: [ARTIFACT, VCS]
   - id: "Maven:commons-configuration:commons-configuration:1.10"
     curations:
       comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
       source_code_origins: [ARTIFACT, VCS]
   - id: "Maven:commons-io:commons-io:2.4"
-    curations:
-      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
-      source_code_origins: [ARTIFACT, VCS]
-  - id: "Maven:commons-io:commons-io:2.8.0"
-    curations:
-      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
-      source_code_origins: [ARTIFACT, VCS]
-  - id: "Maven:commons-lang:commons-lang:2.6"
     curations:
       comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
       source_code_origins: [ARTIFACT, VCS]
