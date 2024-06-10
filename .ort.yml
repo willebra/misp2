@@ -80,10 +80,6 @@ curations:
     curations:
       comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
       source_code_origins: [ARTIFACT, VCS]
-  - id: "Maven:commons-io:commons-io:2.8.0"
-    curations:
-      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
-      source_code_origins: [ARTIFACT, VCS]
   - id: "Maven:commons-lang:commons-lang:2.6"
     curations:
       comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
