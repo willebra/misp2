@@ -56,7 +56,75 @@ excludes:
 
 curations:
   packages:
+  - id: "Maven:commons-cli:commons-cli:1.2"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-cli:commons-cli:1.4"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-codec:commons-codec:1.4"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-codec:commons-codec:1.15"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-configuration:commons-configuration:1.10"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-io:commons-io:2.4"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-io:commons-io:2.8.0"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-lang:commons-lang:2.6"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-lang:commons-lang:2.6"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:commons-logging:commons-logging:1.2"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:javax.servlet:javax.servlet-api:3.1.0"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:log4j:log4j:1.2.16"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:net.sf.saxon:Saxon-HE:9.5.1-8"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:net.sourceforge.htmlcleaner:htmlcleaner:2.24"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:org.apache.pdfbox:fontbox:2.0.20"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
   - id: "Maven:org.apache.pdfbox:pdfbox:2.0.20"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:org.apache.santuario:xmlsec:2.1.5"
+    curations:
+      comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
+      source_code_origins: [ARTIFACT, VCS]
+  - id: "Maven:xml-apis:xml-apis:1.0.b2"
     curations:
       comment: "ORT clones too much content from this specific Subversion VCS, so prefer the source artifact."
       source_code_origins: [ARTIFACT, VCS]
